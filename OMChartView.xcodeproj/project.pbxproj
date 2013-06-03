@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F9B8CBF173AC0CE0047910D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B8CBE173AC0CE0047910D /* UIKit.framework */; };
+		8F9B8CC1173AC0CE0047910D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B8CC0173AC0CE0047910D /* Foundation.framework */; };
+		8F9B8CC3173AC0CE0047910D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B8CC2173AC0CE0047910D /* CoreGraphics.framework */; };
+		8F9B8CC9173AC0CE0047910D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F9B8CC7173AC0CE0047910D /* InfoPlist.strings */; };
+		8F9B8CCB173AC0CE0047910D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9B8CCA173AC0CE0047910D /* main.m */; };
+		8F9B8CCF173AC0CE0047910D /* OMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9B8CCE173AC0CE0047910D /* OMAppDelegate.m */; };
+		8F9B8CD1173AC0CE0047910D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9B8CD0173AC0CE0047910D /* Default.png */; };
+		8F9B8CD3173AC0CF0047910D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9B8CD2173AC0CF0047910D /* Default@2x.png */; };
+		8F9B8CD5173AC0CF0047910D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9B8CD4173AC0CF0047910D /* Default-568h@2x.png */; };
+		8F9B8CD8173AC0CF0047910D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9B8CD6173AC0CF0047910D /* MainStoryboard.storyboard */; };
+		8F9B8CDB173AC0CF0047910D /* OMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9B8CDA173AC0CF0047910D /* OMViewController.m */; };
+		8F9B8CE3173AC0E80047910D /* OMChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9B8CE2173AC0E80047910D /* OMChartView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8F9B8CBB173AC0CE0047910D /* ChartViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F9B8CBE173AC0CE0047910D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8F9B8CC0173AC0CE0047910D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8F9B8CC2173AC0CE0047910D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8F9B8CC6173AC0CE0047910D /* OMChartView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OMChartView-Info.plist"; sourceTree = "<group>"; };
+		8F9B8CC8173AC0CE0047910D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8F9B8CCA173AC0CE0047910D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8F9B8CCC173AC0CE0047910D /* ChartViewExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChartViewExample-Prefix.pch"; sourceTree = "<group>"; };
+		8F9B8CCD173AC0CE0047910D /* OMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMAppDelegate.h; sourceTree = "<group>"; };
+		8F9B8CCE173AC0CE0047910D /* OMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMAppDelegate.m; sourceTree = "<group>"; };
+		8F9B8CD0173AC0CE0047910D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8F9B8CD2173AC0CF0047910D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8F9B8CD4173AC0CF0047910D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8F9B8CD7173AC0CF0047910D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		8F9B8CD9173AC0CF0047910D /* OMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMViewController.h; sourceTree = "<group>"; };
+		8F9B8CDA173AC0CF0047910D /* OMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMViewController.m; sourceTree = "<group>"; };
+		8F9B8CE1173AC0E80047910D /* OMChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMChartView.h; sourceTree = "<group>"; };
+		8F9B8CE2173AC0E80047910D /* OMChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMChartView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F9B8CB8173AC0CE0047910D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9B8CBF173AC0CE0047910D /* UIKit.framework in Frameworks */,
+				8F9B8CC1173AC0CE0047910D /* Foundation.framework in Frameworks */,
+				8F9B8CC3173AC0CE0047910D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F9B8CB2173AC0CE0047910D = {
+			isa = PBXGroup;
+			children = (
+				8F9B8CE1173AC0E80047910D /* OMChartView.h */,
+				8F9B8CE2173AC0E80047910D /* OMChartView.m */,
+				8F9B8CC4173AC0CE0047910D /* ChartViewExample */,
+				8F9B8CBD173AC0CE0047910D /* Frameworks */,
+				8F9B8CBC173AC0CE0047910D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F9B8CBC173AC0CE0047910D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F9B8CBB173AC0CE0047910D /* ChartViewExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F9B8CBD173AC0CE0047910D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F9B8CBE173AC0CE0047910D /* UIKit.framework */,
+				8F9B8CC0173AC0CE0047910D /* Foundation.framework */,
+				8F9B8CC2173AC0CE0047910D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F9B8CC4173AC0CE0047910D /* ChartViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				8F9B8CCD173AC0CE0047910D /* OMAppDelegate.h */,
+				8F9B8CCE173AC0CE0047910D /* OMAppDelegate.m */,
+				8F9B8CD6173AC0CF0047910D /* MainStoryboard.storyboard */,
+				8F9B8CD9173AC0CF0047910D /* OMViewController.h */,
+				8F9B8CDA173AC0CF0047910D /* OMViewController.m */,
+				8F9B8CC5173AC0CE0047910D /* Supporting Files */,
+			);
+			path = ChartViewExample;
+			sourceTree = "<group>";
+		};
+		8F9B8CC5173AC0CE0047910D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F9B8CC6173AC0CE0047910D /* OMChartView-Info.plist */,
+				8F9B8CC7173AC0CE0047910D /* InfoPlist.strings */,
+				8F9B8CCA173AC0CE0047910D /* main.m */,
+				8F9B8CCC173AC0CE0047910D /* ChartViewExample-Prefix.pch */,
+				8F9B8CD0173AC0CE0047910D /* Default.png */,
+				8F9B8CD2173AC0CF0047910D /* Default@2x.png */,
+				8F9B8CD4173AC0CF0047910D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F9B8CBA173AC0CE0047910D /* OMChartView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F9B8CDE173AC0CF0047910D /* Build configuration list for PBXNativeTarget "OMChartView" */;
+			buildPhases = (
+				8F9B8CB7173AC0CE0047910D /* Sources */,
+				8F9B8CB8173AC0CE0047910D /* Frameworks */,
+				8F9B8CB9173AC0CE0047910D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OMChartView;
+			productName = StatisticViewTest;
+			productReference = 8F9B8CBB173AC0CE0047910D /* ChartViewExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F9B8CB3173AC0CE0047910D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OM;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Oliver Mahn";
+			};
+			buildConfigurationList = 8F9B8CB6173AC0CE0047910D /* Build configuration list for PBXProject "OMChartView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8F9B8CB2173AC0CE0047910D;
+			productRefGroup = 8F9B8CBC173AC0CE0047910D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F9B8CBA173AC0CE0047910D /* OMChartView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F9B8CB9173AC0CE0047910D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9B8CC9173AC0CE0047910D /* InfoPlist.strings in Resources */,
+				8F9B8CD1173AC0CE0047910D /* Default.png in Resources */,
+				8F9B8CD3173AC0CF0047910D /* Default@2x.png in Resources */,
+				8F9B8CD5173AC0CF0047910D /* Default-568h@2x.png in Resources */,
+				8F9B8CD8173AC0CF0047910D /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F9B8CB7173AC0CE0047910D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F9B8CCB173AC0CE0047910D /* main.m in Sources */,
+				8F9B8CCF173AC0CE0047910D /* OMAppDelegate.m in Sources */,
+				8F9B8CDB173AC0CF0047910D /* OMViewController.m in Sources */,
+				8F9B8CE3173AC0E80047910D /* OMChartView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8F9B8CC7173AC0CE0047910D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F9B8CC8173AC0CE0047910D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8F9B8CD6173AC0CF0047910D /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F9B8CD7173AC0CF0047910D /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F9B8CDC173AC0CF0047910D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8F9B8CDD173AC0CF0047910D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F9B8CDF173AC0CF0047910D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChartViewExample/ChartViewExample-Prefix.pch";
+				INFOPLIST_FILE = "ChartViewExample/OMChartView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = ChartViewExample;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8F9B8CE0173AC0CF0047910D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ChartViewExample/ChartViewExample-Prefix.pch";
+				INFOPLIST_FILE = "ChartViewExample/OMChartView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = ChartViewExample;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F9B8CB6173AC0CE0047910D /* Build configuration list for PBXProject "OMChartView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9B8CDC173AC0CF0047910D /* Debug */,
+				8F9B8CDD173AC0CF0047910D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F9B8CDE173AC0CF0047910D /* Build configuration list for PBXNativeTarget "OMChartView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F9B8CDF173AC0CF0047910D /* Debug */,
+				8F9B8CE0173AC0CF0047910D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F9B8CB3173AC0CE0047910D /* Project object */;
+}
