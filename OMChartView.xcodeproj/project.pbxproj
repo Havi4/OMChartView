@@ -17,8 +17,9 @@
 		8F9B8CD3173AC0CF0047910D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9B8CD2173AC0CF0047910D /* Default@2x.png */; };
 		8F9B8CD5173AC0CF0047910D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F9B8CD4173AC0CF0047910D /* Default-568h@2x.png */; };
 		8F9B8CD8173AC0CF0047910D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9B8CD6173AC0CF0047910D /* MainStoryboard.storyboard */; };
-		8F9B8CDB173AC0CF0047910D /* OMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9B8CDA173AC0CF0047910D /* OMViewController.m */; };
+		8F9B8CDB173AC0CF0047910D /* OMSimpleChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9B8CDA173AC0CF0047910D /* OMSimpleChartViewController.m */; };
 		8F9B8CE3173AC0E80047910D /* OMChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9B8CE2173AC0E80047910D /* OMChartView.m */; };
+		8FE286E6175DB3EF00899D3A /* OMTwoChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FE286E5175DB3EF00899D3A /* OMTwoChartsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +37,12 @@
 		8F9B8CD2173AC0CF0047910D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8F9B8CD4173AC0CF0047910D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8F9B8CD7173AC0CF0047910D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8F9B8CD9173AC0CF0047910D /* OMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMViewController.h; sourceTree = "<group>"; };
-		8F9B8CDA173AC0CF0047910D /* OMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMViewController.m; sourceTree = "<group>"; };
+		8F9B8CD9173AC0CF0047910D /* OMSimpleChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMSimpleChartViewController.h; sourceTree = "<group>"; };
+		8F9B8CDA173AC0CF0047910D /* OMSimpleChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMSimpleChartViewController.m; sourceTree = "<group>"; };
 		8F9B8CE1173AC0E80047910D /* OMChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMChartView.h; sourceTree = "<group>"; };
 		8F9B8CE2173AC0E80047910D /* OMChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMChartView.m; sourceTree = "<group>"; };
+		8FE286E4175DB3EF00899D3A /* OMTwoChartsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMTwoChartsViewController.h; sourceTree = "<group>"; };
+		8FE286E5175DB3EF00899D3A /* OMTwoChartsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMTwoChartsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +91,13 @@
 		8F9B8CC4173AC0CE0047910D /* ChartViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				8F9B8CD6173AC0CF0047910D /* MainStoryboard.storyboard */,
 				8F9B8CCD173AC0CE0047910D /* OMAppDelegate.h */,
 				8F9B8CCE173AC0CE0047910D /* OMAppDelegate.m */,
-				8F9B8CD6173AC0CF0047910D /* MainStoryboard.storyboard */,
-				8F9B8CD9173AC0CF0047910D /* OMViewController.h */,
-				8F9B8CDA173AC0CF0047910D /* OMViewController.m */,
+				8F9B8CD9173AC0CF0047910D /* OMSimpleChartViewController.h */,
+				8F9B8CDA173AC0CF0047910D /* OMSimpleChartViewController.m */,
+				8FE286E4175DB3EF00899D3A /* OMTwoChartsViewController.h */,
+				8FE286E5175DB3EF00899D3A /* OMTwoChartsViewController.m */,
 				8F9B8CC5173AC0CE0047910D /* Supporting Files */,
 			);
 			path = ChartViewExample;
@@ -181,8 +186,9 @@
 			files = (
 				8F9B8CCB173AC0CE0047910D /* main.m in Sources */,
 				8F9B8CCF173AC0CE0047910D /* OMAppDelegate.m in Sources */,
-				8F9B8CDB173AC0CF0047910D /* OMViewController.m in Sources */,
+				8F9B8CDB173AC0CF0047910D /* OMSimpleChartViewController.m in Sources */,
 				8F9B8CE3173AC0E80047910D /* OMChartView.m in Sources */,
+				8FE286E6175DB3EF00899D3A /* OMTwoChartsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

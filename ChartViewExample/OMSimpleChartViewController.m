@@ -6,20 +6,20 @@
 //  Copyright (c) 2013 Oliver Mahn. All rights reserved.
 //
 
-#import "OMViewController.h"
+#import "OMSimpleChartViewController.h"
 
 #import "OMChartView.h"
 
-@interface OMViewController () <OMChartViewDatasource, OMChartViewDelegate>
+@interface OMSimpleChartViewController () <OMChartViewDatasource, OMChartViewDelegate>
 
 @property (weak, nonatomic) IBOutlet OMChartView *chartView;
 
 @end
 
-@implementation OMViewController
+@implementation OMSimpleChartViewController
 
 static NSMutableArray* array;
-static const NSUInteger count = 30.0;
+static const NSUInteger count = 50.0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,25 +40,25 @@ static const NSUInteger count = 30.0;
 
 #pragma mark - OMChartViewDatasource
 
-- (NSUInteger)numberOfValues {
+- (NSUInteger)numberOfValuesInChartView:(OMChartView *)chartView {
     return [array count];
 }
 
-- (NSNumber*)valueForIndex:(NSUInteger)index {
+- (NSNumber*)chartView:(OMChartView *)chartView valueForIndex:(NSUInteger)index {
     return [NSNumber numberWithFloat:[[array objectAtIndex:index] floatValue]];
 }
 
 #pragma mark - OMChartViewDelegate
 
-- (CGFloat)lineWidth {
+- (CGFloat)lineWidthInChartView:(OMChartView *)chartView {
     return 0.5;
 }
 
-- (UIColor *)lineColor {
+- (UIColor *)lineColorInChartView:(OMChartView *)chartView {
     return [UIColor blueColor];
 }
 
-- (UIColor *)axisColor {
+- (UIColor *)axisColorInChartView:(OMChartView *)chartView {
     return [UIColor blackColor];
 }
 

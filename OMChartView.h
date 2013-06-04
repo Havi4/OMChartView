@@ -8,7 +8,8 @@
 //
 // v0.1
 // - chartView draws a chart with one line for positiv values/indexes only
-//
+// v0.2
+// - support for multiple chartviews per viewcontroller (api changed)
 //
 
 @class OMChartView;
@@ -21,8 +22,10 @@
 
 @required
 
-- (NSUInteger)numberOfValues;
-- (NSNumber*)valueForIndex: (NSUInteger)index;
+- (NSUInteger)numberOfValuesInChartView:(OMChartView *)chartView;
+- (NSNumber*)chartView:(OMChartView *)chartView valueForIndex:(NSUInteger)index;
+
+@optional
 
 @end
 
@@ -34,9 +37,9 @@
 
 @optional
 
-- (CGFloat)lineWidth;       // default is 1.0 if not implemented
-- (UIColor*)lineColor;      // default is [UIColor redColor] if not implemented
-- (UIColor*)axisColor;      // default is [UIColor blueColor] if not implemented
+- (CGFloat)lineWidthInChartView:(OMChartView *)chartView;       // default is 1.0 if not implemented
+- (UIColor*)lineColorInChartView:(OMChartView *)chartView;      // default is [UIColor redColor] if not implemented
+- (UIColor*)axisColorInChartView:(OMChartView *)chartView;      // default is [UIColor blueColor] if not implemented
 
 @end
 

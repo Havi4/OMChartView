@@ -6,6 +6,6 @@
 //  Copyright (c) 2013 Oliver Mahn. All rights reserved.
 //
 
-@interface OMViewController : UIViewController
+@interface OMSimpleChartViewController : UIViewController
 
 @end

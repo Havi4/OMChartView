@@ -20,7 +20,7 @@
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
 
-    // draw x- & -axis
+    // draw x- & y-axis
     CGFloat xAxisOffset = 20.0;
     CGFloat yAxisOffset = 20.0;
     
@@ -28,18 +28,18 @@
     CGFloat yAxis = yAxisOffset;
     
     NSUInteger maxValue = 0;
-    for (int i = 0; i < [self.dataSource numberOfValues]; i++) {
-        maxValue = MAX(maxValue, [[self.dataSource valueForIndex:i] floatValue]);
+    for (int i = 0; i < [self.dataSource numberOfValuesInChartView:self]; i++) {
+        maxValue = MAX(maxValue, [[self.dataSource chartView:self valueForIndex:i] floatValue]);
     }
     maxValue += 1;
 
-    if ([self.delegate respondsToSelector:@selector(axisColor)]) {
-        CGContextSetStrokeColorWithColor(context, [[self.delegate axisColor] CGColor]);
+    if ([self.delegate respondsToSelector:@selector(axisColorInChartView:)]) {
+        CGContextSetStrokeColorWithColor(context, [[self.delegate axisColorInChartView:self] CGColor]);
     } else {
         CGContextSetStrokeColorWithColor(context, [[UIColor blueColor] CGColor]);
     }
     
-    CGFloat xStepWidth = ((self.frame.size.width - yAxisOffset) / ([self.dataSource numberOfValues] * 1.0f));
+    CGFloat xStepWidth = ((self.frame.size.width - yAxisOffset) / ([self.dataSource numberOfValuesInChartView:self] * 1.0f));
     CGFloat xAxisStepWidth = xStepWidth;
     while (xAxisStepWidth < 10.0) {
         xAxisStepWidth = xAxisStepWidth * 2.0;
@@ -54,7 +54,7 @@
     CGContextSetLineWidth(context, 0.5);
     CGContextMoveToPoint(context, 0, xAxis);
     CGContextAddLineToPoint(context, self.frame.size.width, xAxis);
-    for (int i = 0; i < [self.dataSource numberOfValues]; i++) {
+    for (int i = 0; i < [self.dataSource numberOfValuesInChartView:self]; i++) {
         CGContextMoveToPoint(context, yAxis + (i * xAxisStepWidth), xAxis);
         CGContextAddLineToPoint(context, yAxis + (i * xAxisStepWidth), xAxis + 5.0);
     }
@@ -67,20 +67,20 @@
     CGContextStrokePath(context);
     
     // draw chartline
-    if ([self.delegate respondsToSelector:@selector(lineWidth)]) {
-        CGContextSetLineWidth(context, [self.delegate lineWidth]);
+    if ([self.delegate respondsToSelector:@selector(lineWidthInChartView:)]) {
+        CGContextSetLineWidth(context, [self.delegate lineWidthInChartView:self]);
     } else {
         CGContextSetLineWidth(context, 1.0);
     }
-    if ([self.delegate respondsToSelector:@selector(lineColor)]) {
-        CGContextSetStrokeColorWithColor(context, [[self.delegate lineColor] CGColor]);
+    if ([self.delegate respondsToSelector:@selector(lineColorInChartView:)]) {
+        CGContextSetStrokeColorWithColor(context, [[self.delegate lineColorInChartView:self] CGColor]);
     } else {
         CGContextSetStrokeColorWithColor(context, [[UIColor redColor] CGColor]);
     }
 
-    CGContextMoveToPoint(context, yAxisOffset, xAxis - [[self.dataSource valueForIndex:0] floatValue] * yStepWidth);
-    for (int i = 1; i < [self.dataSource numberOfValues]; i++) {
-        CGContextAddLineToPoint(context, i * xStepWidth + yAxisOffset, xAxis - [[self.dataSource valueForIndex:i] floatValue] * yStepWidth);
+    CGContextMoveToPoint(context, yAxisOffset, xAxis - [[self.dataSource chartView:self valueForIndex:0] floatValue] * yStepWidth);
+    for (int i = 1; i < [self.dataSource numberOfValuesInChartView:self]; i++) {
+        CGContextAddLineToPoint(context, i * xStepWidth + yAxisOffset, xAxis - [[self.dataSource chartView:self valueForIndex:i] floatValue] * yStepWidth);
         
     }
     CGContextStrokePath(context);
