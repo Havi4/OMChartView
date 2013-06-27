@@ -44,24 +44,24 @@ static const NSUInteger count = 50.0;
 
 #pragma mark - OMChartViewDatasource
 
-- (NSUInteger)numberOfValuesInChartView:(OMChartView *)chartView {
+- (NSUInteger)chartView:(OMChartView *)chartView numberOfValuesInGraph:(NSUInteger)graph {
     if (chartView == _chartView1) {
         return [array count] / 2;
     }
     return [array count];
 }
 
-- (NSNumber*)chartView:(OMChartView *)chartView valueForIndex:(NSUInteger)index {
+- (NSNumber *)chartView:(OMChartView *)chartView valueForIndex:(NSUInteger)index inGraph:(NSUInteger)graph {
     return [NSNumber numberWithFloat:[[array objectAtIndex:index] floatValue]];
 }
 
 #pragma mark - OMChartViewDelegate
 
-- (CGFloat)lineWidthInChartView:(OMChartView *)chartView {
+- (CGFloat)chartView:(OMChartView *)chartView lineWidthForGraph:(NSUInteger)graph {
     return 0.5;
 }
 
-- (UIColor *)lineColorInChartView:(OMChartView *)chartView {
+- (UIColor *)chartView:(OMChartView *)chartView lineColorForGraph:(NSUInteger)graph {
     if (chartView == _chartView1) {
         return [UIColor redColor];
     }

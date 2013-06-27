@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F6A0F20175FD20B00C82FB8 /* OMDoubleChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A0F1F175FD20B00C82FB8 /* OMDoubleChartViewController.m */; };
 		8F9B8CBF173AC0CE0047910D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B8CBE173AC0CE0047910D /* UIKit.framework */; };
 		8F9B8CC1173AC0CE0047910D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B8CC0173AC0CE0047910D /* Foundation.framework */; };
 		8F9B8CC3173AC0CE0047910D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9B8CC2173AC0CE0047910D /* CoreGraphics.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F6A0F1E175FD20B00C82FB8 /* OMDoubleChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMDoubleChartViewController.h; sourceTree = "<group>"; };
+		8F6A0F1F175FD20B00C82FB8 /* OMDoubleChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMDoubleChartViewController.m; sourceTree = "<group>"; };
 		8F9B8CBB173AC0CE0047910D /* ChartViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9B8CBE173AC0CE0047910D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8F9B8CC0173AC0CE0047910D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +97,8 @@
 				8F9B8CD6173AC0CF0047910D /* MainStoryboard.storyboard */,
 				8F9B8CCD173AC0CE0047910D /* OMAppDelegate.h */,
 				8F9B8CCE173AC0CE0047910D /* OMAppDelegate.m */,
+				8F6A0F1E175FD20B00C82FB8 /* OMDoubleChartViewController.h */,
+				8F6A0F1F175FD20B00C82FB8 /* OMDoubleChartViewController.m */,
 				8F9B8CD9173AC0CF0047910D /* OMSimpleChartViewController.h */,
 				8F9B8CDA173AC0CF0047910D /* OMSimpleChartViewController.m */,
 				8FE286E4175DB3EF00899D3A /* OMTwoChartsViewController.h */,
@@ -189,6 +194,7 @@
 				8F9B8CDB173AC0CF0047910D /* OMSimpleChartViewController.m in Sources */,
 				8F9B8CE3173AC0E80047910D /* OMChartView.m in Sources */,
 				8FE286E6175DB3EF00899D3A /* OMTwoChartsViewController.m in Sources */,
+				8F6A0F20175FD20B00C82FB8 /* OMDoubleChartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

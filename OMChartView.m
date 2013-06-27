@@ -26,10 +26,22 @@
     
     CGFloat xAxis = self.frame.size.height - xAxisOffset;
     CGFloat yAxis = yAxisOffset;
+
+    NSUInteger numberOfGraphs = 1;
+    if ([self.delegate respondsToSelector:@selector(numberOfGraphsInChartView:)]) {
+        numberOfGraphs = [self.dataSource numberOfGraphsInChartView:self];
+    }
     
+    NSUInteger maxCount = 0;
+    for (int i = 0; i < numberOfGraphs; i++) {
+        maxCount = MAX(maxCount, [self.dataSource chartView:self numberOfValuesInGraph:i]);
+    }
+
     NSUInteger maxValue = 0;
-    for (int i = 0; i < [self.dataSource numberOfValuesInChartView:self]; i++) {
-        maxValue = MAX(maxValue, [[self.dataSource chartView:self valueForIndex:i] floatValue]);
+    for (int i = 0; i < numberOfGraphs; i++) {
+        for (int j = 0; j < [self.dataSource chartView:self numberOfValuesInGraph:i]; j++) {
+            maxValue = MAX(maxValue, [[self.dataSource chartView:self valueForIndex:j inGraph:i] floatValue]);
+        }
     }
     maxValue += 1;
 
@@ -39,7 +51,9 @@
         CGContextSetStrokeColorWithColor(context, [[UIColor blueColor] CGColor]);
     }
     
-    CGFloat xStepWidth = ((self.frame.size.width - yAxisOffset) / ([self.dataSource numberOfValuesInChartView:self] * 1.0f));
+    // max Value ermitteln
+    
+    CGFloat xStepWidth = ((self.frame.size.width - yAxisOffset) / ([self.dataSource chartView:self numberOfValuesInGraph:0] * 1.0f));
     CGFloat xAxisStepWidth = xStepWidth;
     while (xAxisStepWidth < 10.0) {
         xAxisStepWidth = xAxisStepWidth * 2.0;
@@ -54,7 +68,7 @@
     CGContextSetLineWidth(context, 0.5);
     CGContextMoveToPoint(context, 0, xAxis);
     CGContextAddLineToPoint(context, self.frame.size.width, xAxis);
-    for (int i = 0; i < [self.dataSource numberOfValuesInChartView:self]; i++) {
+    for (int i = 0; i < [self.dataSource chartView:self numberOfValuesInGraph:0]; i++) {
         CGContextMoveToPoint(context, yAxis + (i * xAxisStepWidth), xAxis);
         CGContextAddLineToPoint(context, yAxis + (i * xAxisStepWidth), xAxis + 5.0);
     }
@@ -67,23 +81,24 @@
     CGContextStrokePath(context);
     
     // draw chartline
-    if ([self.delegate respondsToSelector:@selector(lineWidthInChartView:)]) {
-        CGContextSetLineWidth(context, [self.delegate lineWidthInChartView:self]);
-    } else {
-        CGContextSetLineWidth(context, 1.0);
-    }
-    if ([self.delegate respondsToSelector:@selector(lineColorInChartView:)]) {
-        CGContextSetStrokeColorWithColor(context, [[self.delegate lineColorInChartView:self] CGColor]);
-    } else {
-        CGContextSetStrokeColorWithColor(context, [[UIColor redColor] CGColor]);
-    }
+    for (int i = 0; i < numberOfGraphs; i++) {
+        if ([self.delegate respondsToSelector:@selector(chartView:lineWidthForGraph:)]) {
+            CGContextSetLineWidth(context, [self.delegate chartView:self lineWidthForGraph:i]);
+        } else {
+            CGContextSetLineWidth(context, 1.0);
+        }
+        if ([self.delegate respondsToSelector:@selector(chartView:lineColorForGraph:)]) {
+            CGContextSetStrokeColorWithColor(context, [[self.delegate chartView:self lineColorForGraph:i] CGColor]);
+        } else {
+            CGContextSetStrokeColorWithColor(context, [[UIColor redColor] CGColor]);
+        }
 
-    CGContextMoveToPoint(context, yAxisOffset, xAxis - [[self.dataSource chartView:self valueForIndex:0] floatValue] * yStepWidth);
-    for (int i = 1; i < [self.dataSource numberOfValuesInChartView:self]; i++) {
-        CGContextAddLineToPoint(context, i * xStepWidth + yAxisOffset, xAxis - [[self.dataSource chartView:self valueForIndex:i] floatValue] * yStepWidth);
-        
+        CGContextMoveToPoint(context, yAxisOffset, xAxis - [[self.dataSource chartView:self valueForIndex:0 inGraph:i] floatValue] * yStepWidth);
+        for (int j = 1; j < [self.dataSource chartView:self numberOfValuesInGraph:i]; j++) {
+            CGContextAddLineToPoint(context, j * xStepWidth + yAxisOffset, xAxis - [[self.dataSource chartView:self valueForIndex:j inGraph:i] floatValue] * yStepWidth);
+        }
+        CGContextStrokePath(context);
     }
-    CGContextStrokePath(context);
 }
 
 @end
