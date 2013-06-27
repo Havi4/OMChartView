@@ -1,4 +1,4 @@
 OMChartView
 ===========
 
-iOS ChartView (do not use at the moment, currently in early development)
+iOS ChartView (early alpha version, use at own risk, currently under development)
